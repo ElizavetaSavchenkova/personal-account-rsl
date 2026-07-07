@@ -1,0 +1,511 @@
+/* ========================================
+   БУХГАЛТЕРИЯ - Полные стили
+   ======================================== */
+
+.accounting {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 24px 0;
+}
+
+/* ========================================
+   Сводка зарплата - ИСПРАВЛЕНО
+   ======================================== */
+
+.salary-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: stretch; /* Растягивает карточки по высоте */
+}
+
+/* Исправление для карточек с разной высотой контента */
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 220px; /* Фиксированная минимальная высота */
+  justify-content: flex-start; /* Выравнивание от верха */
+}
+
+.summary-icon {
+  font-size: 40px; /* Увеличил иконку */
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+.summary-info {
+  flex: 1; /* Занимает всё доступное пространство */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: #8590a6;
+  line-height: 1.3;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d4cd3;
+  line-height: 1.2;
+  margin: 4px 0;
+}
+
+.summary-amount {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d4cd3;
+  margin-top: auto; /* Прижимает к низу */
+  padding-top: 8px;
+}
+
+.summary-sub {
+  font-size: 12px;
+  color: #8590a6;
+  margin-top: auto; /* Прижимает к низу */
+  padding-top: 8px;
+}
+
+/* Для карточки с материальной помощью */
+.summary-card.material-help .summary-value {
+  color: #10b981; /* Зелёный цвет для "Выплачено" */
+  font-size: 18px;
+}
+
+.summary-card.material-help .summary-amount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d4cd3;
+}
+
+/* Для карточки с KPI */
+.summary-card.kpi .summary-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.kpi-progress {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  margin: 12px 0 8px 0;
+  overflow: hidden;
+}
+
+.kpi-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #0d4cd3 100%);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .summary-card {
+    min-height: 200px;
+    padding: 16px;
+  }
+  
+  .summary-icon {
+    font-size: 32px;
+  }
+  
+  .summary-value {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   Табы
+   ======================================== */
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0;
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #0d4cd3;
+  background: #f2f3f7;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab.active {
+  color: #0d4cd3;
+  border-bottom-color: #0d4cd3;
+  font-weight: 600;
+}
+
+/* ========================================
+   Контент табов
+   ======================================== */
+
+.tab-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+/* ========================================
+   Таблица
+   ======================================== */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead {
+  background: #f9fafb;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.data-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #222;
+  border-bottom: 1px solid #f2f3f7;
+}
+
+.data-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 600;
+  color: #0d4cd3;
+}
+
+/* ========================================
+   Статус бейдж
+   ======================================== */
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.small {
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+/* ========================================
+   Справки (карточки)
+   ======================================== */
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.certificate-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.certificate-card:hover {
+  background: #dbeafe;
+  border-color: #0d4cd3;
+}
+
+.certificate-icon {
+  font-size: 32px;
+}
+
+.certificate-info {
+  flex: 1;
+}
+
+.certificate-type {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.certificate-year {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.certificate-date {
+  font-size: 12px;
+  color: #8590a6;
+}
+
+.btn-download {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  padding: 4px;
+}
+
+.btn-download:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   Компенсации
+   ======================================== */
+
+.compensations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.compensation-card {
+  padding: 20px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.compensation-card:hover {
+  background: #fff;
+  border-color: #0d4cd3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.compensation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.compensation-icon {
+  font-size: 28px;
+}
+
+.compensation-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.compensation-amount {
+  font-size: 14px;
+  color: #0d4cd3;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #0d4cd3;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   Кнопки
+   ======================================== */
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #0d4cd3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0039a8;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  padding: 4px;
+}
+
+.btn-icon:hover {
+  opacity: 1;
+}
+
+/* ========================================
+   Статусы и кнопки (ПЕРЕД медиа-запросом)
+   ======================================== */
+
+.status-available {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.status-used {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.btn-small {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #0d4cd3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-small:hover {
+  background: #0039a8;
+}
+
+/* KPI баллы */
+.kpi-progress {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.kpi-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #0d4cd3 100%);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* ========================================
+   Адаптивность
+   ======================================== */
+
+@media (max-width: 768px) {
+  .salary-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .data-table {
+    font-size: 13px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+  }
+  
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certificates-grid,
+  .compensations-grid {
+    grid-template-columns: 1fr;
+  }
+}

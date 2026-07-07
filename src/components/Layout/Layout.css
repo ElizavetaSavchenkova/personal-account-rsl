@@ -1,0 +1,93 @@
+/* ========================================
+   LAYOUT - Основные стили
+   ======================================== */
+
+/* Общий контейнер страницы */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f3f7;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+/* Должно быть так: */
+.layout-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+
+}
+
+.layout-main {
+  flex: 1;
+  padding: 24px 32px;
+  min-width: 0; 
+  overflow-x: auto; 
+}
+
+/* ========================================
+   Адаптивность
+   ======================================== */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .layout-container {
+    max-width: 100%;
+  }
+  
+  .layout-main {
+    padding: 20px 24px;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+  .layout-main {
+    padding: 16px;
+  }
+}
+
+/* ========================================
+   Утилиты для отступов (опционально)
+   ======================================== */
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Скроллбар для всей страницы
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f3f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c7d0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8590a6;
+}

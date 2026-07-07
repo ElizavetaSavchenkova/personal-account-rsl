@@ -1,0 +1,327 @@
+/* ========================================
+   СПРАВКИ
+   ======================================== */
+
+.certificates-page {
+  padding: 32px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 24px 0;
+}
+
+/* Сводка */
+.certificates-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+}
+
+.summary-icon {
+  font-size: 32px;
+}
+
+.summary-info {
+  flex: 1;
+}
+
+.summary-label {
+  font-size: 13px;
+  color: #8590a6;
+  margin-bottom: 4px;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d4cd3;
+}
+
+/* Табы */
+.tabs-container {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #0d4cd3;
+}
+
+.tab.active {
+  color: #0d4cd3;
+  border-bottom-color: #0d4cd3;
+  font-weight: 600;
+}
+
+/* Таблица */
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  max-width: 872px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.certificates-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.certificates-table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.certificates-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.certificates-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f2f3f7;
+  color: #222;
+}
+
+.certificates-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.cert-type {
+  font-weight: 600;
+  color: #222;
+}
+
+.cert-description {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Бейджи */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge.ready {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Кнопки */
+.btn-download {
+  padding: 8px 16px;
+  background: #0d4cd3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-download:hover {
+  background: #0039a8;
+}
+
+.btn-primary-small {
+  padding: 8px 16px;
+  background: #0d4cd3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary-small:hover {
+  background: #0039a8;
+}
+
+/* Форма заказа */
+.request-form {
+  padding: 24px;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #0d4cd3;
+  box-shadow: 0 0 0 3px rgba(13, 76, 211, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Инфо блок */
+.info-block {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #dbeafe;
+  border-radius: 8px;
+  margin: 24px 0;
+  border-left: 4px solid #0d4cd3;
+}
+
+.info-icon {
+  font-size: 24px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #1e40af;
+  line-height: 1.6;
+}
+
+.info-text strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #1e3a8a;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  background: #fff;
+  color: #222;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #0d4cd3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0039a8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .certificates-page {
+    padding: 20px 16px;
+  }
+  
+  .certificates-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-wrapper {
+    max-width: 100%;
+  }
+}

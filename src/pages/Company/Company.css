@@ -1,0 +1,433 @@
+/* ========================================
+   КОМПАНИЯ - Сотрудники, Структура, Отдел
+   ======================================== */
+
+.company-page {
+  padding: 32px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 24px 0;
+}
+
+/* Табы */
+.tabs-container {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #0d4cd3;
+}
+
+.tab.active {
+  color: #0d4cd3;
+  border-bottom-color: #0d4cd3;
+  font-weight: 600;
+}
+
+/* ========================================
+   СОТРУДНИКИ
+   ======================================== */
+
+.employees-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Поиск */
+.search-container {
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #0d4cd3;
+  box-shadow: 0 0 0 3px rgba(13, 76, 211, 0.1);
+}
+
+/* Алфавитный фильтр */
+.alphabet-filter {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.alphabet-btn {
+  padding: 6px 12px;
+  background: #f2f3f7;
+  border: none;
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.alphabet-btn:hover {
+  background: #e5e7eb;
+}
+
+.alphabet-btn.active {
+  background: #0d4cd3;
+  color: #fff;
+}
+
+/* Список сотрудников */
+.employees-list {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.employees-header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 20px;
+  padding: 16px 24px;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.employee-card {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f2f3f7;
+  transition: background 0.2s;
+}
+
+.employee-card:hover {
+  background: #f9fafb;
+}
+
+.employee-card:last-child {
+  border-bottom: none;
+}
+
+/* Колонки сотрудника */
+.col-employee,
+.col-contacts,
+.col-office,
+.col-vacation {
+  padding: 4px 0;
+}
+
+.emp-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.emp-position {
+  font-size: 13px;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.emp-department {
+  font-size: 13px;
+  color: #0d4cd3;
+}
+
+/* Контакты */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.contact-icon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+}
+
+.contact-link {
+  color: #0d4cd3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: #0039a8;
+  text-decoration: underline;
+}
+
+.contact-text {
+  color: #222;
+}
+
+/* Помещение */
+.office-text {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ========================================
+   СТРУКТУРА
+   ======================================== */
+
+.structure-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.structure-header {
+  margin-bottom: 8px;
+}
+
+.structure-searches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.structure-search {
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.structure-search:focus {
+  border-color: #0d4cd3;
+  box-shadow: 0 0 0 3px rgba(13, 76, 211, 0.1);
+}
+
+/* Дерево структуры */
+.structure-tree {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 20px 0;
+}
+
+.structure-item {
+  border-bottom: 1px solid #f2f3f7;
+}
+
+.structure-row {
+  padding: 14px 24px;
+  transition: background 0.2s;
+}
+
+.structure-row.clickable {
+  cursor: pointer;
+}
+
+.structure-row.clickable:hover {
+  background: #f9fafb;
+}
+
+.structure-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #222;
+}
+
+.expand-icon {
+  font-size: 10px;
+  color: #6b7280;
+  transition: transform 0.2s;
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+
+.expand-icon.expanded {
+  transform: rotate(90deg);
+}
+
+.expand-placeholder {
+  width: 16px;
+}
+
+.structure-children {
+  background: #f9fafb;
+}
+
+/* ========================================
+   МОЙ ОТДЕЛ
+   ======================================== */
+
+.department-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.department-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.department-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 6px 12px;
+  background: #f2f3f7;
+  border-radius: 8px;
+}
+
+/* Колонка отпуска */
+.col-vacation {
+  padding: 4px 0;
+}
+
+.vacation-info {
+  padding: 8px 12px;
+  background: #fef3c7;
+  border-radius: 8px;
+  border-left: 3px solid #f59e0b;
+}
+
+.vacation-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 2px;
+}
+
+.vacation-dates {
+  font-size: 12px;
+  color: #78350f;
+}
+
+.no-vacation {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ========================================
+   Пустое состояние
+   ======================================== */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #8590a6;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.empty-text {
+  font-size: 14px;
+}
+
+/* ========================================
+   Адаптивность
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .employees-header,
+  .employee-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .employees-header {
+    display: none;
+  }
+  
+  .structure-searches {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-page {
+    padding: 20px 16px;
+  }
+  
+  .alphabet-filter {
+    gap: 4px;
+  }
+  
+  .alphabet-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .department-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .department-stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

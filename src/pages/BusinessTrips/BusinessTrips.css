@@ -1,0 +1,299 @@
+/* ========================================
+   КОМАНДИРОВКИ
+   ======================================== */
+
+.trips-page {
+  padding: 32px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+/* Кнопка оформить */
+.trips-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.btn-trips-primary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0d4cd3 0%, #0039a8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(13, 76, 211, 0.25);
+}
+
+.btn-trips-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 76, 211, 0.35);
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+/* Статистика */
+.trips-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card.upcoming {
+  border-left: 4px solid #f59e0b;
+}
+
+.stat-card.this-year {
+  border-left: 4px solid #10b981;
+}
+
+.stat-icon {
+  font-size: 40px;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #8590a6;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d4cd3;
+}
+
+/* Табы */
+.tabs-container {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #0d4cd3;
+}
+
+.tab.active {
+  color: #0d4cd3;
+  border-bottom-color: #0d4cd3;
+  font-weight: 600;
+}
+
+/* Таблица */
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.trips-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.trips-table thead {
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.trips-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.trips-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f2f3f7;
+  color: #222;
+  vertical-align: top;
+}
+
+.trips-table tbody tr {
+  transition: background 0.2s;
+}
+
+.trips-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.trips-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.font-bold {
+  font-weight: 600;
+  color: #222;
+}
+
+.trip-purpose {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.days-count {
+  font-weight: 600;
+  color: #0d4cd3;
+  white-space: nowrap;
+}
+
+/* Статусы */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-planned {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-approved {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Пустое состояние */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #8590a6;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.empty-text {
+  font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .trips-page {
+    padding: 24px 32px;
+  }
+  
+  .trips-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trips-page {
+    padding: 20px 16px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .trips-button-wrapper {
+    justify-content: center;
+  }
+  
+  .btn-trips-primary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+  }
+  
+  .trips-table {
+    font-size: 13px;
+  }
+  
+  .trips-table th,
+  .trips-table td {
+    padding: 12px 10px;
+  }
+  
+  .trip-purpose {
+    font-size: 12px;
+  }
+}
