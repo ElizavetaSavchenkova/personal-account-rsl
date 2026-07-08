@@ -24,8 +24,8 @@ const menuItems = [
 
   { name: 'Документы', icon: '📄', path: '/documents' },
  
-  { name: 'Компания', icon: '🏢', path: '/company' },
-  { name: 'Новости', icon: '📢', path: '/news' },
+  { name: 'Сотрудники и структура', icon: '🏢', path: '/company' },
+  
   { name: 'Профиль и настройки', icon: '⚙️', path: '/profile' },
   { name: 'Обратная связь', icon: '💬', path: '/feedback' }
   

@@ -260,6 +260,7 @@
   border-radius: 12px;
   font-size: 12px;
   font-weight: 600;
+  align-self: flex-end;
 }
 
 .status-badge.small {

@@ -228,7 +228,7 @@ const Company = () => {
 
   return (
     <div className="company-page">
-      <h1 className="page-title">🏢 Компания</h1>
+      <h1 className="page-title">🏢 Структура и сотрудники</h1>
 
       {/* Табы */}
       <div className="tabs-container">

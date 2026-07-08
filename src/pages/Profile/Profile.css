@@ -90,6 +90,9 @@
 
 .profile-header-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .profile-name {
@@ -138,6 +141,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  text-align: end;
+  justify-content:flex-end;
 }
 
 /* Сетка карточек */
@@ -666,7 +671,222 @@
   flex: 1;
   justify-content: flex-end;
 }
+/* ========================================
+   ВКЛАДКА: ЗАКРЕПЛЕННОЕ ИМУЩЕСТВО
+   ======================================== */
 
+.equipment-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.equipment-header {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  padding: 24px 32px;
+  border-radius: 12px;
+}
+
+.equipment-header .section-title {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: #1e40af;
+}
+
+/* Сетка карточек */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.equipment-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s;
+}
+
+.equipment-card:hover {
+  border-color: #0d4cd3;
+  box-shadow: 0 4px 16px rgba(13, 76, 211, 0.15);
+  transform: translateY(-4px);
+}
+
+.equipment-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f2f3f7;
+}
+
+.equipment-card-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.equipment-card-type {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.equipment-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.equipment-status.excellent {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.equipment-status.good {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.equipment-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.equipment-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f3f7;
+}
+
+.equipment-detail:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #8590a6;
+}
+
+.detail-value {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+
+.detail-value.mono {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  background: #f9fafb;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Кнопки */
+.btn-equipment-report-issue {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-equipment-report-issue:hover {
+  border-color: #f59e0b;
+  color: #f59e0b;
+  background: #fffbeb;
+}
+
+.equipment-actions {
+  display: flex;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.btn-equipment-main-report,
+.btn-equipment-replace {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+}
+
+.btn-equipment-main-report {
+  background: linear-gradient(135deg, #0d4cd3 0%, #0039a8 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13, 76, 211, 0.3);
+}
+
+.btn-equipment-main-report:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 76, 211, 0.4);
+}
+
+.btn-equipment-replace {
+  background: #fff;
+  color: #222;
+  border: 2px solid #e5e7eb;
+}
+
+.btn-equipment-replace:hover {
+  border-color: #10b981;
+  color: #10b981;
+  background: #f0fdf4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .equipment-actions {
+    flex-direction: column;
+  }
+  
+  .equipment-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .equipment-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
 /* Адаптивность для документов и действий */
 @media (max-width: 1024px) {
   .info-cards-grid {
